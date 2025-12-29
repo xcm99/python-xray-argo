@@ -2,10 +2,10 @@ name: Streamlit 自动唤醒
 
 on:
   workflow_dispatch:
-  repository_dispatch:
-    types: [service-down-alert]
-  # schedule:
-  #   - cron: '0 0 * * *' # 每天 UTC 00:00 运行
+#  repository_dispatch:
+#    types: [service-down-alert]
+  schedule:
+    - cron: '0 */6 * * *'
 
 jobs:
   wakeup:
